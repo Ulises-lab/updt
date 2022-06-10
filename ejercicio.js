@@ -19,11 +19,6 @@ vari(pizzas);
 //console.log(pizzas.length);
 //console.log(vari(pizzas));
 
-
-
-
-
-
 /*
 function filterPizzas(pizzas) {
   const vacio = [];
@@ -41,5 +36,4 @@ let pizzas = [
   { type: 'pineapple', size: 'S'},
   { type: 'mushrooms', size: 'L'}
 ]
-
 console.log(filterPizzas(pizzas));
