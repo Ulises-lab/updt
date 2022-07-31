@@ -30,8 +30,13 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec gnome-terminal 
 #bindsym $mod+Return exec terminator
+
+for_window [class="Gnome-terminal"] floating enable
+for_window [class="Gnome-terminal"] [floating] resize set 640 440
+
+
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -190,7 +195,7 @@ client.focused #bf7500 #bf7500 #bf7500 #ffe570
 #smart_gaps on
 
 # Delete border for windows
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 4
 
 # WallPaper
 exec_always feh --bg-fill /home/ulises/Pictures/tree.jpg
@@ -217,6 +222,7 @@ bindsym $mod+Print exec gnome-screenshot -a
 
 # Change language keyboard
 exec setxkbmap -rules evdev -model pc105 -layout "latam,us" -option "grp:alt_shift_toggle"
+# Meta+Shift+Alt
 #exec --no-startup-id setxkbmap -model pc105 -layout us,latam -variant qwerty -option grp:win_space_toggle
 
 # Second screen 
